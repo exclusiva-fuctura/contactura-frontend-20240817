@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'relatorios-despesa', component: DespesasComponent },
-    { path: 'relatorio-receita', component: ReceitasComponent },
+    { path: 'relatorios-receita', component: ReceitasComponent },
     { path: 'lancamentos', loadChildren: () => import('./lancamentos/lancamentos.module').then(m =>
     m.LancamentosModule)},
     { path: '**', component: PageNotFoundComponent },
