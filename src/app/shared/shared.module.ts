@@ -4,7 +4,8 @@ import { MaterialModule } from '../material/material.module';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { DaoService } from './services/dao.service';
-import { AppState } from '../app.state';
+import { LoginService } from './services/login.service';
+import { AppStateService } from './services/app-state.service';
 
 
 
@@ -23,7 +24,8 @@ import { AppState } from '../app.state';
   ],
   providers: [
     DaoService,
-    AppState
+    LoginService,
+    AppStateService,
   ]
 })
 export class SharedModule { }

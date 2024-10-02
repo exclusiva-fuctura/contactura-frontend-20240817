@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppState } from '../../../app.state';
+import { AppStateService } from '../../services/app-state.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +11,7 @@ export class MenuComponent {
 
   constructor(
     private router: Router,
-    private state: AppState
+    private state: AppStateService
   ){}
 
   get estouRelatorioReceita(): boolean {
