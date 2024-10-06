@@ -14,12 +14,13 @@ import { AppStateService } from '../../shared/services/app-state.service';
 import { MenuTypeEnum } from '../../shared/enums/menu-type.enum';
 import { IDespesa } from '../../shared/models/despesa.interface';
 import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-despesas',
   standalone: true,
-  imports: [MaterialModule,ReactiveFormsModule, SharedModule],
+  imports: [MaterialModule,ReactiveFormsModule, SharedModule, CommonModule],
   templateUrl: './despesas.component.html',
   styleUrl: './despesas.component.scss'
 })
@@ -48,7 +49,7 @@ export class DespesasComponent {
    * label do botão dinâmico
    */
   get buttonLabel(): string {
-    return this.lancamentosService.modoEdicao ? 'Editar' : 'Salvar';
+    return this.lancamentosService.modoEdicao ? 'Atualizar' : 'Salvar';
   }
 
   /**

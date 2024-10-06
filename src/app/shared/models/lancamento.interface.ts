@@ -3,7 +3,7 @@ export interface ILancamento{
     descricao: string;
     ehFixo: boolean;
     ehReceita: boolean;
-    id: number;
+    id?: number;
     mensagem?: string;
     tipo: string;
     valor: number;
